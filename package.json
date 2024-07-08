@@ -51,7 +51,8 @@
 	},
 	"dependencies": {
 		"@opentelemetry/api": "^1.4.0",
-		"tdigest": "^0.1.1"
+		"tdigest": "^0.1.1",
+		"util": "^0.12.5"
 	},
 	"types": "./index.d.ts",
 	"jest": {

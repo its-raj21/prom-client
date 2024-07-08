@@ -2,7 +2,8 @@
 	"name": "prom-client",
 	"version": "15.1.3",
 	"description": "Client for prometheus",
-	"main": "index.js",
+	"type": "module",
+	"exports": "./index.js",
 	"files": [
 		"lib/",
 		"index.js",
@@ -15,7 +16,7 @@
 		"benchmarks": "node ./benchmarks/index.js",
 		"test": "npm run lint && npm run check-prettier && npm run compile-typescript && npm run test-unit",
 		"lint": "eslint .",
-		"test-unit": "jest",
+		"test-unit": "NODE_OPTIONS=--experimental-vm-modules npx jest",
 		"run-prettier": "prettier . .eslintrc",
 		"check-prettier": "npm run run-prettier -- --check",
 		"compile-typescript": "tsc --project .",
